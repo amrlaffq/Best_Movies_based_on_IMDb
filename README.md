@@ -1,9 +1,9 @@
 # Best Rated Movies Based on Netflix & IMDb
 This project is about the best rated movies based on Netflix and IMDb
 </p>
-<img src="https://Python-pandas_Best_Movies_based_on_IMDb/Movie images/netflix.jpg" alt="Figure"> 
+<img src="https://Python-pandas_Best_Movies_based_on_Netflix_IMDb/Movie images/netflix.jpg" alt="Figure"> 
 </p>
-<img src="https://Python-pandas_Best_Movies_based_on_IMDb/Movie images/imdb.png" alt="Figure"> 
+<img src="https://Python-pandas_Best_Movies_based_on_Netflix_IMDb/Movie images/imdb.png" alt="Figure"> 
 
 ## Loading the dataset
 The IMDb dataset were taken from two files:
@@ -32,7 +32,7 @@ net_imdb.groupby('genre').size()
 genre_new = sns.catplot(x="genre", y="value", kind="bar", data=genre_new).set_xticklabels(rotation=90)
 ```
 </p>
-<img src="https://Python-pandas_Best_Movies_based_on_IMDb/Movie images/genre.PNG" alt="Figure"> 
+<img src="https://Python-pandas_Best_Movies_based_on_Netflix_IMDb/Movie images/genre.PNG" alt="Figure"> 
 
 Popular movies from each country
 ```js
@@ -42,4 +42,4 @@ myFigure = sns.catplot(data=pop_mov, kind='bar', x='country', y='value')
 myFigure.set_xticklabels(rotation=90)
 ```
 </p>
-<img src="https://Python-pandas_Best_Movies_based_on_IMDb/Movie images/country.PNG" alt="Figure"> 
+<img src="https://Python-pandas_Best_Movies_based_on_Netflix_IMDb/Movie images/country.PNG" alt="Figure"> 
