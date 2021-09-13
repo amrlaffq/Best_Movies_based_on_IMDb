@@ -24,7 +24,22 @@ net_imdb = imdb.merge(how= 'inner', right = netflix, right_on = ['title','releas
 ```
 
 ## By using Exploratory Data Analysis (EDA), data visualization were made from the collected dataset
-</p>
-<img src="https://Python-pandas_Best_Movies_based_on_IMDb/Movie images/country.PNG" alt="Figure"> 
+Top 10 most popular genre
+```js
+import matplotlib as plt
+genre_new = net_imdb.groupby('genre').size().to_frame('value').sort_values('value',ascending=False)
+net_imdb.groupby('genre').size()
+genre_new = sns.catplot(x="genre", y="value", kind="bar", data=genre_new).set_xticklabels(rotation=90)
+```
 </p>
 <img src="https://Python-pandas_Best_Movies_based_on_IMDb/Movie images/genre.PNG" alt="Figure"> 
+
+Popular movies from each country
+```js
+pop_mov = high_rated_mov.groupby('country').size().to_frame('value').sort_values('value',ascending= False)
+pop_mov = pop_mov.reset_index()
+myFigure = sns.catplot(data=pop_mov, kind='bar', x='country', y='value')
+myFigure.set_xticklabels(rotation=90)
+```
+</p>
+<img src="https://Python-pandas_Best_Movies_based_on_IMDb/Movie images/country.PNG" alt="Figure"> 
